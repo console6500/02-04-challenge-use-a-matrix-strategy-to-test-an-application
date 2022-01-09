@@ -1,4 +1,4 @@
-name: Python application
+name: Python Workflow for Sum Frequencies Application
 on:
   workflow_dispatch:
   push:
@@ -8,6 +8,9 @@ on:
 
 jobs:
   build:
+    #----------------------------------------------#
+    # Add your matrix strategy configuration here  #
+    #----------------------------------------------#
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
