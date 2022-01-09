@@ -14,12 +14,12 @@ jobs:
         experimental: [false]
         include:
         - platform: ubuntu-latest
-          version: "3.11.0-alpha.3"
+          version: "3.11"
           experimental: true
         exclude:
         - platform: windows-latest
           version: "3.10"
-          
+    continue-on-error: ${{ matrix.experimental }}      
     runs-on: ${{ matrix.platform }}
     steps:
     - uses: actions/checkout@v2
