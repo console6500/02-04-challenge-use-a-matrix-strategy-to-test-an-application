@@ -14,7 +14,7 @@ jobs:
         experimental: [false]
         include:
         - platform: ubuntu-latest
-          version: "3.11"
+          version: "3.6"
           experimental: true
         exclude:
         - platform: windows-latest
@@ -42,5 +42,5 @@ jobs:
       run: |
         python sum_frequencies.py MOCK_DATA.json
     - name: Inject error
-      if: ${{ matrix.version }} == "3.11"
+      if: ${{ matrix.version }} == "3.6"
       run: exit 1
