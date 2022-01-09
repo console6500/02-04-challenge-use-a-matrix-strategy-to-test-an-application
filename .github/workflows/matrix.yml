@@ -41,6 +41,3 @@ jobs:
     - name: Test the application with mock data
       run: |
         python sum_frequencies.py MOCK_DATA.json
-    - name: Inject error
-      if: ${{ matrix.version }} == "3.6"
-      run: exit 1
